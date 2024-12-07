@@ -1,0 +1,67 @@
+{
+  "name": "llm-autocomplete",
+  "publisher": "hackathon",
+  "displayName": "LLM Autocomplete",
+  "description": "A Visual Studio Code extension to autocomplete Python code using a local LLM.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onCommand:llm-autocomplete.completeCode"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "llm-autocomplete.completeCode",
+        "title": "LLM Autocomplete",
+        "category": "Code Completion"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "llm-autocomplete.completeCode",
+        "key": "cmd+5",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "llm-autocomplete.completeCode",
+        "key": "ctrl+5",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.9",
+    "@types/node": "^20.x",
+    "@types/vscode": "^1.95.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.13.0"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  },
+  "keywords": [
+    "vscode",
+    "extension",
+    "llm",
+    "autocomplete",
+    "python",
+    "ai"
+  ],
+  "author": {
+    "name": "hackathon",
+    "email": "harishbalaji241@gmail.com"
+  },
+  "license": "MIT"
+}
